@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+:root {
+  --bgDark: #242424;
+  --textColorDark: #cecece;
+  --foregroundDark: #3b3b3b;
+  --shadowColor: #1f1f1f;
+}
+body {
+  background-color: var(--bgDark);
+  color: var(--textColorDark);
+}

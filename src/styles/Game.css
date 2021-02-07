@@ -1,0 +1,28 @@
+.Game {
+  font-family: "Ubuntu", sans-serif;
+}
+.Game ul {
+  display: flex;
+  list-style-type: none;
+}
+.Game ul li {
+  flex: 1;
+  display: flex;
+  align-content: center;
+  height: 1rem;
+  justify-content: center;
+  margin: 10px;
+  border-right: 1px solid var(--textColorDark);
+  border-bottom: 1px solid var(--textColorDark);
+}
+.Game ul li:hover {
+  cursor: pointer;
+  background-color: var(--foregroundDark);
+}
+
+.circleSymbol{
+  color: rgb(100,100,255)
+}
+.crossSymbol{
+  color: rgb(255,100,100);
+}
