@@ -1,28 +1,42 @@
-.Game {
+:root{
+  --gameBorder: 0.2rem solid var(--textColorDark)
+}
+.Game{
   font-family: "Ubuntu", sans-serif;
 }
-.Game ul {
-  display: flex;
-  list-style-type: none;
-}
-.Game ul li {
-  flex: 1;
-  display: flex;
-  align-content: center;
-  height: 1rem;
-  justify-content: center;
-  margin: 10px;
-  border-right: 1px solid var(--textColorDark);
-  border-bottom: 1px solid var(--textColorDark);
-}
-.Game ul li:hover {
-  cursor: pointer;
-  background-color: var(--foregroundDark);
-}
-
 .circleSymbol{
   color: rgb(100,100,255)
 }
 .crossSymbol{
   color: rgb(255,100,100);
+}
+.Game td {
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.Game td:hover{
+  background-color: var(--foregroundDark);
+  transition: background-color 0.1s
+}
+button{
+  font-family: inherit;
+}
+select{
+  font-family: inherit;
+}
+.Game table {
+  margin: 5px auto;
+  border-collapse: collapse;
+}
+.vert {
+  border-left: 2px solid var(--textColorDark);
+  border-right: 2px solid var(--textColorDark);
+}
+.hori {
+  border-top: 2px solid var(--textColorDark);
+  border-bottom: 2px solid var(--textColorDark);
 }
