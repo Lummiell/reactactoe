@@ -106,7 +106,7 @@ export class Game {
     let antidiagonal = "";
     let pos_x = 0;
     let pos_y = 2;
-    while (pos_x <=2) {
+    while (pos_x <= 2) {
       antidiagonal += spaces[pos_x][pos_y].content;
       pos_x++;
       pos_y--;
@@ -117,6 +117,42 @@ export class Game {
     }
     //nope
     return null;
+  }
+  col(col_x: number): GameSymbol[] {
+    let output: GameSymbol[] = [];
+    if (col_x < 3) {
+      this.Spaces[col_x].forEach((gameSymbol) => {
+        output.push(gameSymbol.content);
+      });
+    }
+    return output;
+  }
+  row(row_y: number): GameSymbol[] {
+    let output: GameSymbol[] = [];
+    if (row_y < 3) {
+      this.Spaces.forEach((item) => {
+        output.push(item[row_y].content);
+      });
+    }
+    return output;
+  }
+  diagonal(): GameSymbol[] {
+    let diag: GameSymbol[] = [];
+    for (let diag_pos = 0; diag_pos < 3; diag_pos++) {
+      diag.push(this.Spaces[diag_pos][diag_pos].content);
+    }
+    return diag;
+  }
+  antiDiagonal(): GameSymbol[] {
+    let antidiagonal: GameSymbol[] = [];
+    let pos_x = 0;
+    let pos_y = 2;
+    while (pos_x <= 2) {
+      antidiagonal.push(this.Spaces[pos_x][pos_y].content);
+      pos_x++;
+      pos_y--;
+    }
+    return antidiagonal;
   }
   toString() {
     let output = "";
