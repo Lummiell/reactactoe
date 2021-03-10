@@ -17,6 +17,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  
 }
 .Game td:hover{
   background-color: var(--foregroundDark);
@@ -31,6 +32,7 @@ select{
 .Game table {
   margin: 5px auto;
   border-collapse: collapse;
+  
 }
 .vert {
   border-left: 2px solid var(--textColorDark);
